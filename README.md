@@ -17,3 +17,4 @@ Every third ball to paddle collision speeds up the ball and the computer's paddl
 The game is not perfect. There is a bug once in a while where the ball gets stuck to a paddle or follows the top or bottom of the screen. Also, collision is not always detected.
 
 
+![screenshot](https://cloud.githubusercontent.com/assets/7481680/21527291/444fd322-ccf8-11e6-8f94-953f9839fea9.png)
