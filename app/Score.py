@@ -2,7 +2,7 @@
 #                                                                      #
 # David Fuller                                                         #
 #                                                                      #
-# Driver File                                                          #
+# Score Class for Pong                                                 #
 #                                                                      #
 # Created on 2016-12-27                                                #
 #                                                                      #
@@ -14,27 +14,41 @@
 #                                                                      #
 ########################################################################
 
-from Logger import *   # Logger Class - Error logging
-from init   import *   # init Class - Initialize App
+from   .Constants import *   # Constants File
+import pygame                # For GUI
 
 ########################################################################
 #                                                                      #
-#                                DRIVER                                #
+#                             SCORE CLASS                              #
 #                                                                      #
 ########################################################################
 
-# Initialize app
-def main():
-    app = init(appDirectory)
+class Score(object):
+    def __init__(self, screen, x : int, y : int):
+        self.screen = screen   # Main screen
 
-# Store app directory
-appDirectory = os.path.dirname(os.path.realpath(__file__))
+        # Initialize font
+        pygame.font.init()
+        self.font = pygame.font.SysFont("Helvetica", FONT_SIZE)
 
-# Initialize error logging
-logger = Logger(appDirectory, 'w')
+        # Text attributes
+        self.color = WHITE
+        self.score = "0"
+        self.X     = x
+        self.Y     = y
 
-# Try to run app, otherwise log error
-try:   
-    main()
-except:
-    logger.createLog('')
+    # Method increments score
+    def increment(self):
+        self.score = str(int(self.score) + 1)
+
+    # Method draws text
+    def drawText(self):
+        self.text = self.font.render(self.score, \
+                                     True,       \
+                                     self.color)
+        self.screen.blit(self.text, (self.X, self.Y))
+
+    # Method updates score
+    def update(self):
+        self.drawText()
+        

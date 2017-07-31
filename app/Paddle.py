@@ -14,10 +14,10 @@
 #                                                                      #
 ########################################################################
 
-from   Constants import *   # Constants File
-import pygame               # For GUI
-import random               # For choosing paddle velocity
-import math                 # For collision detection
+from   .Constants import *   # Constants File
+import pygame                # For GUI
+import random                # For choosing paddle velocity
+import math                  # For collision detection
 
 ########################################################################
 #                                                                      #

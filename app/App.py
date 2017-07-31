@@ -14,10 +14,10 @@
 #                                                                      #
 ########################################################################
 
-from   Constants import *   # Constants File
-from   Paddle    import *   # Paddle Class
-from   Ball      import *   # Ball Class
-from   Score     import *   # Score Class
+from   .Constants import *   # Constants File
+from   .Paddle    import *   # Paddle Class
+from   .Ball      import *   # Ball Class
+from   .Score     import *   # Score Class
 import pygame               # For GUI
 
 ########################################################################
@@ -26,7 +26,7 @@ import pygame               # For GUI
 #                                                                      #
 ########################################################################
 
-class init(object):
+class App(object):
     def __init__(self, appDirectory : str):
         self.appDirectory = appDirectory
 

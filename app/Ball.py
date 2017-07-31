@@ -14,9 +14,9 @@
 #                                                                      #
 ########################################################################
 
-from   Constants import *   # Constants File
-import pygame               # For GUI
-import random               # For choosing ball velocity
+from   .Constants import *   # Constants File
+import pygame                # For GUI
+import random                # For choosing ball velocity
 
 ########################################################################
 #                                                                      #
